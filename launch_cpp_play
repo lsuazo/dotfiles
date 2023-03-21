@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+session='cpp-play'
+
+tmux has-session -t $session 2>/dev/null
+if [ $? != 0 ]; then
+	tmux new-session -d -s  $session
+
+	window=0
+	tmux rename-window -t $session:$window 'editor'
+	tmux send-keys -t $session:$window 'cd ~/Code/playground_cpp' Enter 'vim . "+:NERDTree"' Enter
+	tmux split-window -h
+	tmux send-keys -t $session:$window 'cd ~/Code/playground_cpp' Enter 'clear' Enter
+	tmux resize-pane -t 1 -x 1 
+fi
+
+
+tmux attach-session -t $session

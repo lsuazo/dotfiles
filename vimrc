@@ -9,6 +9,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'preservim/nerdtree'
 Plugin 'lervag/vimtex'
 Plugin 'godlygeek/tabular'
 Plugin 'preservim/vim-markdown'
