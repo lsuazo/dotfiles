@@ -1,2 +1,3 @@
+" to use with MarkdownPreview
 let @r="`>a</font>\<Esc>`<i<font color=red>\<Esc>"
 let @g="`>a</font>\<Esc>`<i<font color=gray>\<Esc>"

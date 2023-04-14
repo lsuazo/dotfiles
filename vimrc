@@ -53,5 +53,5 @@ let g:mkdp_refresh_slow=1
 " Nerdtree
 map <F2> :NERDTreeToggle<CR>
 
-" load personal macros into regusters
+" load personal macros into registers
 source ~/.vimmacros
