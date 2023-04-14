@@ -32,6 +32,12 @@ filetype plugin indent on    " required
 
 syntax on
 
+" Window navigation with Ctrl-[hjkl]
+noremap <C-J> <C-W>j
+noremap <C-K> <C-W>k
+noremap <C-H> <C-W>h
+noremap <C-L> <C-W>l
+
 " VIMTEX stuff
 let g:vimtex_fold_enabled = 1
 
@@ -43,3 +49,9 @@ set shiftwidth=4
 
 " iamcco/markdown-previw.nvim
 let g:mkdp_refresh_slow=1
+
+" Nerdtree
+map <F2> :NERDTreeToggle<CR>
+
+" load personal macros into regusters
+source ~/.vimmacros
