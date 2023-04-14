@@ -1,3 +1,4 @@
 " to use with MarkdownPreview
-let @r="`>a</font>\<Esc>`<i<font color=red>\<Esc>"
-let @g="`>a</font>\<Esc>`<i<font color=gray>\<Esc>"
+let @r="a<font color=red>  </font>\<Esc>8h"
+let @g="a<font color=gray>  </font>\<Esc>8h"
+let @c="`>a</font>\<Esc>`<i<font color=>\<Esc>h"
