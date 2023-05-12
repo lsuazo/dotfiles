@@ -30,7 +30,14 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" <jk> escapes
+inoremap jk <ESC>
+
 syntax on
+set number " line number
+set hlsearch " highlight search results
+set ignorecase " ignore case in search
+set incsearch " search incrementally as I type
 
 " Window navigation with Ctrl-[hjkl]
 noremap <C-J> <C-W>j
@@ -44,7 +51,6 @@ let g:vimtex_fold_enabled = 1
 " General options
 set tabstop=4
 set shiftwidth=4
-
 
 
 " iamcco/markdown-previw.nvim
