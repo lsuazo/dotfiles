@@ -15,7 +15,8 @@ colorscheme gruvbox
 map <F2> :NERDTreeToggle<CR>
 
 " REGULAR VIM SETTINGS
-set rnu
+" hybrid line number 
+set nu rnu
 
 " Window navigation with Ctrl-[hjkl]
 noremap <C-J> <C-W>j

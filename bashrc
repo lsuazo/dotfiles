@@ -105,6 +105,10 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.bash_colors ]; then
+    . ~/.bash_colors
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -124,6 +128,18 @@ set -o vi
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# show virtualenv in prompt
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+export BASE_PROMPT=$PS1
+function updatePrompt {
+    if [[ "$(pyenv virtualenvs)" == *"* $(pyenv version-name) "* ]]; then
+        export PS1='($(pyenv version-name)) '$BASE_PROMPT
+    else
+        export PS1=$BASE_PROMPT
+    fi
+}
+export PROMPT_COMMAND='updatePrompt'
 
 # default editor vim
 export VISUAL=vim

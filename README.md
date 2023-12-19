@@ -9,6 +9,7 @@ config files for personal setup
 * solid vim setup
     - nvim 
         * sudo/brew - or install - or build
+        * sudo install yields a version that is too old for some plugs - can just download tar ball from git
     - vim-plug
         * junegunn/vim-plug - simple curl script
         * in ~/.local/share/nvim/
@@ -53,6 +54,13 @@ config files for personal setup
 	- on ubuntu - adding gruvbox plug and setting scheme leads to some lua related error. 
 		* do I need to install lua?
 		* tried installing lua and still broken
+        * solution was jsut to get latest version of nvim (download from tar from git)
+	- clangd not working
+		* after CocInstall coc-clang, still getting no hints
+		* asked me to do something like CocCommand clangd.install
+		* still not working, said something about clangd server
+		* tried to sudo apt-get install clangd-12 and still nothing
+        * just doing sudo apt-get intsall clangd fixed the issue
 
 ## TODO
 * curate bashrc
