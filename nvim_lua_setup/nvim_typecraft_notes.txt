@@ -1,0 +1,70 @@
+Typecraft, youtube channel
+
+# Episode 1
+* nvim has build in lua interpreter - so using lua makes sense
+	- very powerfull
+* nvim runtime path: ~/.config/nvim/
+	- nvim will load stuff from here
+	- so init.lua goes here
+* source init file: :source %
+* vip note: init.lua is not a vimscript file!
+	- lua uses functions to expose vim runtime variables
+	- most often `vim.cmd(...)`
+		* pass vim command as string - runs it
+		* ex: `vim.cmd("set expandtab")
+* two main package managers: packer and lazy
+	- similar - but lazy has better performance
+	- just follow lazy.nvim repo instructtions - copy some code into init.lua
+* lazy
+	- :Lazy - brings up lazy GUI
+* packages
+	- catppuccin - for colorscheme
+		* goto git repo - it will give you the line to add to lua
+		* must add require("catpuccin").setup() and vim.cmd.colorscheme "catppuccin"
+	- telescope - fuzy finding of files and grep
+		* must get!
+		* follow instructions on gitrepo
+		* (MY COMMENT: for live grep to work you must have ripgrep installed)
+	- treesitter
+		* takes snippet of code and generates an abstract syntax tree
+			- parsers on top of treesitter go through this ast to highlight text
+		* for highlighting and indenting
+		* (MY COMMENT: not liking this, seems very slow for python)= - maybe?)
+
+
+# Episode 2
+*more packages:
+	- neo-tree
+		* dependes on web-devicons - which in term depends on nerd fonts. You must install and configure terminal to use thes
+      - need to download nerd font, install it, and also set the preference on the terminal to use that font!
+* very cool split init.lua into pieces
+  - have lua folder
+  - have file per pluggin
+    * each file returns a lua table - and lazy takes each of these, puts them together 
+  - have another file for just vim commands
+
+
+# Episode 3
+  - LSP: language server protocol
+    * open json rpc standard that lallows communication between text editor and language server on your machine
+    * originally developed by microsoft
+    * VSCODE does this under the hood
+  - for neovim, its more manual
+    1. install language server on our machine
+      * mason - plugin that allows us to install an manage language server
+      * mason-lspconfig - bridge between mason and lsp confit 
+        - has a useful ensure install property
+    2. configure neovim to talk to that server
+      * nvim-lspconfig - sets comunnication between neovim and lsp
+        - also allows us to configure keybindings, etc
+        - cool way to figure out avaialble functionality `:h vim.lsp.buf`
+        - :LspInfo - to see which buffers connected to clients
+        - add keybindings fro hover, definion and code_action
+      * extra credit: add plugin telescope-ui-select.nvim - to make code actions look nicer
+        - code actions are pretty awesome!
+
+# Episode 4
+  - 
+
+    
+    
