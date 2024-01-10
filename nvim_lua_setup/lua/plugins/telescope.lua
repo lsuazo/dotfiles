@@ -7,6 +7,8 @@ return {
       local builtin = require("telescope.builtin")
       vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
       vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+      -- Disable folding in Telescope's result window.
+      vim.api.nvim_create_autocmd("FileType", { pattern = "TelescopeResults", command = [[setlocal nofoldenable]] })
     end
   },
   {
