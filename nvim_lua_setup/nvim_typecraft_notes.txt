@@ -64,7 +64,49 @@ Typecraft, youtube channel
         - code actions are pretty awesome!
 
 # Episode 4
-  - 
+  - linters typically command line tools
+  - back in the day ale and coc were used for linting
+    * used to integrate command line tools
+    * kind of difficult to manage
+  - null_ls
+    * wraps command line tools into a generalized LSP
+    * problem: null_ls has beed deprecated by the creator - so dont use it
+    * alternative none-ls (community managed fork of null-ls)
+    * VIP: need to use :Mason to install formatters (like stylua)
+      - navigate to formatter in mason, then press i to install
+    * we keymap vim.lsp.buf.format - anythin attached to this lsp command should get called when we trigger this
+      - jargon: formatting is obvious, but diagnostics means linting
+    * [ME] I think I will keep linter and formater as part of project (like pre-commit hooks, etc)
+    * [ME] what is it that mason is doing? do ppl need to create special bindings?
+
+# Episode 5 (autocompletion and snippets)
+  * this is a very complicated topic in neovim
+    - no concensus
+    - require a hodge podge of plugins
+    - high level:
+      1) nvim-cmp - this is the completion engine for neovim (only for completions)
+      2) luaSnip - anippet engine for neovim
+      3) cmp_luasnip - 
+      4) FriendlySnippet - vscode like snippets
+      5) cmp.nvim.lsp - completion source for nvim cmp
+  * nvim-cmp
+    - completion engine for neovim written in lua
+    - sources are installed from external repositories
+    - this is the thing that powers the window that you see when you are typin
+    - config
+      * use luasnip in snippet piece - it is the snippet engine
+      * must add luasnip and cmp_luasnip (as mentioned in repo)
+      * we also add the snippet collection: friendlysnippet (community driven repo for all kinds of snippets in all programming languages)
+    - so nvim-cmp opens up window, the data is driven by luaSnip (and friendly snippets), then when we select and hit enter it is completed by cmp_luasnip
+  * cmp-nvim-lsp
+    - reaches out to avaialble lsp and ask it for copletion recomendations
+    - then cmp will expand those completions
+    - add plugin
+    - broadcast capabilites to language servers - means modifing our lsp config (see repo instructions)
 
     
-    
+
+* useful commands:
+  - :Lazy
+  - :Mason
+  - :LspInfo
