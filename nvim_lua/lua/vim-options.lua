@@ -13,7 +13,8 @@ vim.cmd("set cursorline")
 vim.g.mapleader = " "
 
 vim.api.nvim_set_keymap("n", "<leader>h", ":noh<CR>", {})
-vim.api.nvim_set_keymap("n", "<leader>e", ":bufdo e!<CR>", {})
+vim.api.nvim_set_keymap("n", "<leader>r", ":bufdo e!<CR>", {})
+vim.api.nvim_set_keymap("n", "<leader>w", ":wa<CR>", {})
 vim.api.nvim_set_keymap("n", "<C-j>", "<C-W>j", {noremap = true})
 vim.api.nvim_set_keymap("n", "<C-h>", "<C-W>h", {noremap = true})
 vim.api.nvim_set_keymap("n", "<C-k>", "<C-W>k", {noremap = true})
