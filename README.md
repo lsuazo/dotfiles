@@ -1,6 +1,13 @@
 # dotfiles
 config files for personal setup
 
+## current iteration
+* currently I like my nvim setup - see nvim_typecraft_notes.txt
+
+-------
+
+## previous iteration
+
 * Currently, I think regular bash (not zshell) together with tmux, and a good vim setup is a great combination.
 	- good vim setup: nvim + coc + telescope
 	- ripgrep is good to - needed for CocSearch
