@@ -3,6 +3,7 @@ config files for personal setup
 
 ## current iteration
 * currently I like my nvim setup - see nvim_typecraft_notes.txt
+    - move nvim_lua into ~/.config  -- and call it lua
 
 -------
 
