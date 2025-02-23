@@ -123,6 +123,8 @@ fi
 
 # vim keybindings
 set -o vi
+# dont got into command edit mode if I press v in visual mode
+bind -m vi-command '"v": ""'
 
 #pyenv
 export PYENV_ROOT="$HOME/.pyenv"
